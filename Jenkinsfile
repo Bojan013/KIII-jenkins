@@ -4,7 +4,7 @@ node {
         checkout scm
     }
     stage('Build image') {
-       app = docker.build("Bojan013/kiii-jenkins-blueocean")
+       app = docker.build("bojan013/kiii-jenkins-blueocean")
     }
     stage('Push image') {   
         docker.withRegistry('https://registry.hub.docker.com', 'DockerHub') {
